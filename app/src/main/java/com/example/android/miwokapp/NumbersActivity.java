@@ -53,7 +53,8 @@ public class NumbersActivity extends AppCompatActivity {
 //        wordView.setText(words.get(0));
 //        rootView.addView(wordView);
 
-
+        //only a command added just to be able to commit and tell that there is an extrabrach that will
+        //be left back in future
 
     }
 }
