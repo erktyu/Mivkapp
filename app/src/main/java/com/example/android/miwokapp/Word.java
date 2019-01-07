@@ -5,9 +5,13 @@ public class Word {
     private String mMiwokTranslation;
     private int mResouce;
 
-    public Word(String defaultTranslation, String miwokTranslation, int resouce){
+    public Word(String defaultTranslation, String miwokTranslation){
         this.mDefaultTranslation =defaultTranslation;
         this.mMiwokTranslation =miwokTranslation;
+    }
+
+    public Word(String defaultTranslation, String miwokTranslation, int resouce){
+        this(defaultTranslation,miwokTranslation);
         this.mResouce = resouce;
     }
 
