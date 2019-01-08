@@ -1,6 +1,7 @@
 package com.example.android.miwokapp;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         textView2.setText(currentWordObj.getDefaultTranslation());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
-        imageView.setImageResource(currentWordObj.getmResouce());
+
+        if (currentWordObj.isThereImage()) {
+            imageView.setImageResource(currentWordObj.getmResouce());
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            imageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }

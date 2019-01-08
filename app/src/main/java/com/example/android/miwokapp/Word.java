@@ -4,15 +4,18 @@ public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
     private int mResouce;
+    private boolean isThereImage;
 
     public Word(String defaultTranslation, String miwokTranslation){
         this.mDefaultTranslation =defaultTranslation;
         this.mMiwokTranslation =miwokTranslation;
+        this.isThereImage=false;
     }
 
     public Word(String defaultTranslation, String miwokTranslation, int resouce){
         this(defaultTranslation,miwokTranslation);
         this.mResouce = resouce;
+        this.isThereImage=true;
     }
 
     public void setDefaultTranslation(String DefaultTranslation) {
@@ -23,9 +26,13 @@ public class Word {
         this.mMiwokTranslation = miwokTranslation;
     }
 
-    public void setmResouce(int mResouce) {
-        this.mResouce = mResouce;
+    public boolean isThereImage() {
+        return isThereImage;
     }
+
+    //    public void setmResouce(int mResouce) {
+//        this.mResouce = mResouce;
+//    }
 
     public String getDefaultTranslation() {
         return mDefaultTranslation;
